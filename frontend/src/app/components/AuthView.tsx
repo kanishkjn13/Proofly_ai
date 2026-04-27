@@ -36,14 +36,14 @@ export function AuthView({ onLogin }: AuthViewProps) {
 
       if (isLogin) {
         // LOGIN API
-        response = await fetch('http://127.0.0.1:8000/api/auth/login/', {
+        response = await fetch('https://kanishkjn13.pythonanywhere.com/api/auth/login/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email, password }),
         });
       } else {
         // SIGNUP API
-        response = await fetch('http://127.0.0.1:8000/api/auth/signup/', {
+        response = await fetch('https://kanishkjn13.pythonanywhere.com/api/auth/signup/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email, password, name }),
@@ -63,7 +63,7 @@ export function AuthView({ onLogin }: AuthViewProps) {
       }
 
       // Fetch user info (optional but better)
-      const userRes = await fetch('http://127.0.0.1:8000/api/auth/me/', {
+      const userRes = await fetch('https://kanishkjn13.pythonanywhere.com/api/auth/me/', {
         headers: {
           'Authorization': `Bearer ${data.access}`,
         },

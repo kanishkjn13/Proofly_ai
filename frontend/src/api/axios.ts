@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'http://localhost:8000/api',  // your Django backend URL
+    baseURL: 'https://kanishkjn13.pythonanywhere.com/api',  // your Django backend URL
 });
 
 // Auto-attach JWT token to every request
